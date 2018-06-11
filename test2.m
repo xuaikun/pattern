@@ -39,7 +39,7 @@ X=1/2*(student_avg'+avg');%对两个样本进行求平均值操作
 S1=(student_avg'-X)*(student_avg'-X)';%类似求两个样本到它们平均值之间的欧式距离
 S2=(avg'-X)*(avg'-X)';%类似求两个样本到它们平均值之间的欧式距离
 S=S1+S2;%两个欧式距离进行求平均值
-mahalanobis=qrt(temp'*(S^-1)*temp);%求得马氏距离
+mahalanobis=sqrt(temp'*(S^-1)*temp);%求得马氏距离
 fprintf('该同学与均值数据之间的马氏距离为：%0.2f\n',mahalanobis);
 disp('press any button to continue:');
 pause
